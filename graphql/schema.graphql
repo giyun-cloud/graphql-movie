@@ -1,4 +1,9 @@
+type Cloud {
+  name: String
+  age: Int
+  gender: String
+}
+
 type Query {
-  name: String!
-  age: Int!
+  person: Cloud
 }

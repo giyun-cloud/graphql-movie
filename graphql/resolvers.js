@@ -1,9 +1,12 @@
+const CloudG = {
+  name: "GY",
+  age: 5,
+  gender: "Male",
+};
+
 const resolvers = {
   Query: {
-    name: () => "Cloud-G",
-    age() {
-      return 6;
-    },
+    person: () => CloudG,
   },
 };
 
