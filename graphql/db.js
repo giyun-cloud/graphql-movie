@@ -10,12 +10,21 @@ export const getById = (id) => {
   const filteredEmperors = emperors.filter((emperor) => emperor.id === id);
   return filteredEmperors[0];
 };
-export const deleteEmperor = () => {
+export const deleteEmperor = (id) => {
   const filteredEmperors = emperors.filter((emperor) => emperor.id !== id);
-  if (emperors.length > filteredEmperors) {
+  if (emperors.length > filteredEmperors.length) {
     emperors = filteredEmperors;
     return true;
   } else {
     return false;
   }
+};
+export const addEmperor = (name, prize) => {
+  const newEmperor = {
+    id: emperors.length,
+    name,
+    prize,
+  };
+  emperors.push(newEmperor);
+  return newEmperor;
 };

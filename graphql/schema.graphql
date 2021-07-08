@@ -11,4 +11,5 @@ type Query {
 
 type Mutation {
   addEmperor(name: String!, prize: Int!): Emperor!
+  deleteEmperor(id: Int!): Boolean!
 }
