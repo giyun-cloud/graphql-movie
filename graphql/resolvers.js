@@ -1,9 +1,9 @@
-import { people, getById } from "./db";
+import { getByEmperors, getById } from "./db";
 
 const resolvers = {
   Query: {
-    people: () => people,
-    person: (_, { id }) => getById(id),
+    emperors: () => getByEmperors(),
+    emperor: (_, { id }) => getById(id),
   },
 };
 

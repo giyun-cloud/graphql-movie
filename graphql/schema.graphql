@@ -1,11 +1,14 @@
-type Person {
+type Emperor {
   id: Int
   name: String
-  age: Int
-  gender: String
+  prize: Int
 }
 
 type Query {
-  people: [Person]!
-  person(id: Int!): Person
+  emperors: [Emperor]!
+  emperor(id: Int!): Emperor
+}
+
+type Mutation {
+  addEmperor(name: String!, prize: Int!): Emperor!
 }

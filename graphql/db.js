@@ -1,11 +1,21 @@
-export const people = [
-  { id: 0, name: "GY", age: 5, gender: "Male" },
-  { id: 1, name: "MA", age: 8, gender: "Male" },
-  { id: 2, name: "SA", age: 10, gender: "Male" },
-  { id: 3, name: "AW", age: 15, gender: "Female" },
+let emperors = [
+  { id: 0, name: "흰수염", prize: 50 },
+  { id: 1, name: "샹크스", prize: 40 },
+  { id: 2, name: "카이도우", prize: 46 },
+  { id: 3, name: "빅맘", prize: 44 },
 ];
 
+export const getByEmperors = () => emperors;
 export const getById = (id) => {
-  const filteredPeople = people.filter((person) => person.id === id);
-  return filteredPeople[0];
+  const filteredEmperors = emperors.filter((emperor) => emperor.id === id);
+  return filteredEmperors[0];
+};
+export const deleteEmperor = () => {
+  const filteredEmperors = emperors.filter((emperor) => emperor.id !== id);
+  if (emperors.length > filteredEmperors) {
+    emperors = filteredEmperors;
+    return true;
+  } else {
+    return false;
+  }
 };
