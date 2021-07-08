@@ -1,15 +1,12 @@
-type Emperor {
-  id: Int
-  name: String
-  prize: Int
+type Movie {
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
 }
 
 type Query {
-  emperors: [Emperor]!
-  emperor(id: Int!): Emperor
-}
-
-type Mutation {
-  addEmperor(name: String!, prize: Int!): Emperor!
-  deleteEmperor(id: Int!): Boolean!
+  movies: [Movie]!
 }
